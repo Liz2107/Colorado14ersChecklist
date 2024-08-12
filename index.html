@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Elizabeth's Colorado 14er's Checklist</title>
+        <style>
+            #table {
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 90%; 
+                margin-left: auto;
+                margin-right: auto;
+              }
+              
+              #table td, #table th {
+                border: 1px solid #ddd;
+                padding: 8px;
+              }
+              
+              #table tr:nth-child(even){background-color: #f2f2f2;}
+              
+              #table tr:hover {background-color: #ddd;}
+              
+              #table th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: navy;
+                color: white;
+              }
+
+              #rtable {
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 70%; 
+                margin-left: auto;
+                margin-right: auto;
+              }
+              
+              #rtable td, #rtable th {
+                border: 1px solid #ddd;
+                padding: 8px;
+              }
+              
+              #rtable tr:nth-child(even){background-color: #f2f2f2;}
+              
+              #rtable tr:hover {background-color: #ddd;}
+              
+              #rtable th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: navy;
+                color: white;
+              }
+
+              body{
+                align-items: center;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+              }
+              .gray {
+                filter: grayscale();
+              }
+        </style>
+    </head>
+    <body>
+        <h1>COLORADO 14ERS - STONE</h1>
+        <h3 id="t_climbed">Total Climbed: </h3>
+        <h3 id="t_miles">Total Distance: </h3>
+        <h3 id="t_elev">Total Elevation Gain: </h3>
+        <form>
+            <label for="mountains">Mountain:</label>
+            <select id="mountains" name="mountains">
+            </select> 
+            <label for="date">Date:</label>
+            <input type="text" id="date" name="date" size="10" required> 
+            <button type="submit" onclick="add14er(this.form)">Add</button>
+        </form>
+        <br>
+        <table id="table" class="table_">
+            <tr><th>Peak</th><th>Mountain Range</th><th>Altitude</th><th>Difficulty</th><th>Miles</th><th>Elevation Gain</th><th>Date Completed</th><th>Photo</th></tr>
+            
+        </table>
+        <br><br>
+        <table id="rtable" class="table_">
+          <tr><th>Range</th><th>Number Climbed</th><th>Percent</th></tr>
+        </table>
+        <br><br><br>
+        <script src="14ers.js"></script>
+    </body>
+</html>
